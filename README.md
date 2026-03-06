@@ -1,26 +1,43 @@
-# 🚀 Automação de Testes E2E - Desafio Analista de QA
+# Automação de Testes E2E - Desafio Analista de QA
 
-Projeto desenvolvido para validar as funcionalidades de front-end de dois sites de certificação e institucionais da "Faculdade Exemplo".
+## Relatório de Bugs e Melhorias - Desafio QA Rubeus
 
-## 🛠️ Ferramentas Utilizadas
-- **Cypress**: Framework para automação de testes.
-- **JavaScript**: Linguagem de script.
-- **Mochawesome**: Geração de relatórios de execução em HTML.
+Este documento detalha as falhas e oportunidades de melhoria identificadas através de testes automatizados com Cypress nas páginas de certificação e institucional da Faculdade Exemplo.
 
-## 🔍 Relatório de Bugs Encontrados
+## Correções site: [https://qualidade.apprbs.com.br/site]
 
-### Bug 001 - Site de Certificação (Link 1)
-- **Cenário:** Clique no botão "Saiba mais".
-- **Comportamento Atual:** O botão não realiza o redirecionamento. O teste de automação confirmou que a URL permanece inalterada após a interação.
-- **Severidade:** Média (impacta a jornada de descoberta do usuário).
+Item 01 - Conteúdo "Cursos" não localizado
+Tipo: Correção.
+Classificação: Utilidade (pois impede o usuário de ver o que a instituição oferece).Prioridade: Alta.
+Descrição: O sistema falha ao carregar ou exibir o elemento de texto "Cursos", essencial para a navegação do usuário.
+_________________________________________________________________________________
+Item 02 - Falha no CTA "Inscreva-se"
+Tipo: Correção.
+Classificação: Utilidade (é a função principal da página que falhou).
+Prioridade: Alta.
+Descrição: O botão de inscrição não foi encontrado ou não está clicável, interrompendo o fluxo de conversão.
+_________________________________________________________________________________
+Item 03 - Visibilidade do Captcha
+Tipo: Melhoria ou Correção.
+Classificação: Usabilidade (atrapalha o envio do formulário).
+Prioridade: Média.
+Descrição: O ícone de captcha está oculto (.hide), o que pode impedir a validação de segurança por parte do usuário.
 
-### Bug 002 - Site Institucional (Link 2)
-- **Cenário:** Validação do botão "Inscreva-se".
-- **Comportamento Atual:** [Mencione aqui se o botão funcionou ou se apresentou o mesmo erro do site 1].
-- **Evidência:** Automação validando a mudança de URL através de asserções de integração.
 
-## 🚀 Como Executar o Projeto
-1. Clone o repositório.
-2. No terminal, execute `npm install` para instalar as dependências.
-3. Para abrir a interface visual: `npx cypress open`.
-4. Para rodar em modo headless e gerar relatório: `npx cypress run`.
+
+## Correções site: [https://qualidade.apprbs.com.br/certificacao]
+
+Item 04 - Botão "Saiba mais" inoperante (Certificação)
+Tipo: Correção
+Classificação: Utilidade
+Prioridade: Alta
+Descrição: Ao clicar no botão "Saiba mais", o sistema não realiza o redirecionamento esperado para outra página ou seção. O teste automatizado confirmou que a URL permanece inalterada após a interação, impedindo o usuário de acessar informações adicionais sobre a certificação.
+
+
+
+2. Instruções para Execução do Projeto
+Para rodar este projeto localmente, siga os passos abaixo:
+
+Instale as dependências necessárias utilizando o comando: 'npm install'
+Para abrir a interface interativa do Cypress: 'npx cypress open'
+Para rodar os testes em modo headless e gerar relatórios: 'npx cypress run'
